@@ -1,0 +1,6 @@
+- id: check-requirements
+  name: check requirements
+  description: pre-commit hook to ensure consistent requirements files
+  entry: check-requirements
+  language: python
+  files: 'requirements'
