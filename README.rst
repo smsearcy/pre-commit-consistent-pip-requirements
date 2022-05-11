@@ -3,11 +3,12 @@ Consistent ``pip`` Requirements
 
 .. image:: https://github.com/smsearcy/pre-commit-poetry-export/actions/workflows/tests.yml/badge.svg
    :target: https://github.com/smsearcy/pre-commit-poetry-export/actions/workflows/tests.yml
-
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 
-``pre-commit`` hook to ensure that multiple requirements files
+|
+
+A ``pre-commit`` hook to ensure that multiple Python requirements files
 (e.g. for development and production)
 have consistent versions.
 
@@ -37,6 +38,7 @@ Add the following to your `.pre-commit-config.yaml` file:
 Run `pre-commit run --all-files` to create the `requirements.txt` based on the current `poetry.lock` file.
 Future changes to `poetry.lock` will trigger the hook to run again.
 
+
 How it Works
 ------------
 
@@ -48,7 +50,11 @@ Otherwise it finds files matching the pattern ``*requirements*.txt`` in the root
 
 If the hook fails then you'll need to fix the discrepancy and then re-commit.
 
-Found any issues or want to suggest an improvement in the code?
-Please contribute by opening an issue.
+
+Contributing
+------------
+
+Found an issue or want to suggest an improvement in the code?
+Please contribute by opening an issue or a pull request.
 
 Thanks! :)
