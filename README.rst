@@ -35,9 +35,6 @@ Add the following to your `.pre-commit-config.yaml` file:
         hooks:
           - id: check-requirements
 
-Run `pre-commit run --all-files` to create the `requirements.txt` based on the current `poetry.lock` file.
-Future changes to `poetry.lock` will trigger the hook to run again.
-
 
 How it Works
 ------------
