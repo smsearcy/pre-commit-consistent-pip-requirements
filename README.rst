@@ -31,7 +31,7 @@ Add the following to your `.pre-commit-config.yaml` file:
 
     repos:
       - repo: https://github.com/smsearcy/pre-commit-consistent-pip-requirements
-        rev: v0.1.0
+        rev: v0.2.0
         hooks:
           - id: check-requirements
 
