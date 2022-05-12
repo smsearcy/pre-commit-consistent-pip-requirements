@@ -61,7 +61,7 @@ def _compare_requirements(first: dict[str, str], second: dict[str, str]) -> bool
     no_mismatches = True
     for package in overlapping_packages:
         if first[package] != second[package]:
-            print(f"Mismatch for '{package}': {first[package]} != {second[package]}")
+            print(f"  {package}: {first[package]} != {second[package]}")
             no_mismatches = False
     return no_mismatches
 
