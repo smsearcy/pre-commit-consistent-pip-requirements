@@ -13,7 +13,7 @@ def main(argv=None):
 
     requirements_by_file = {path.name: _read_requirements(path) for path in files}
 
-    for file1, file2 in itertools.combinations(path.name for path in files):
+    for file1, file2 in itertools.combinations(requirements_by_file.keys(), 2):
         if not _compare_requirements(
             requirements_by_file[file1], requirements_by_file[file2]
         ):

@@ -28,6 +28,7 @@ Changed
 Fixed
 ^^^^^
 
+* Fix bug when more than one requirements file found.
 * Fix crash on blank lines in the requirements file.
 
 
