@@ -57,11 +57,12 @@ def _read_requirements(filename: Path) -> dict[str, str]:
 def _compare_requirements(first: dict[str, str], second: dict[str, str]) -> bool:
 
     overlapping_packages = set(first.keys()).intersection(second.keys())
+    no_mismatches = True
     for package in overlapping_packages:
         if first[package] != second[package]:
             print(f"Mismatch for '{package}': {first[package]} != {second[package]}")
-            return False
-    return True
+            no_mismatches = False
+    return no_mismatches
 
 
 if __name__ == "__main__":
