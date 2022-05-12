@@ -43,7 +43,7 @@ def _read_requirements(filename: Path) -> dict[str, str]:
     with filename.open("r") as f:
         for line in f:
             line = line.strip()
-            if line[0] == "#":
+            if line == "" or line[0] == "#":
                 continue
             try:
                 package, version = line.split("==", 1)
