@@ -40,7 +40,7 @@ def _find_requirements_files(root: Path | None = None) -> list[Path]:
 def _read_requirements(filename: Path) -> dict[str, str]:
     """Read dictionary of package versions from requirements file."""
 
-    packages = {}
+    packages: dict[str, str] = {}
     with filename.open("r") as f:
         for line in f:
             line = line.strip()

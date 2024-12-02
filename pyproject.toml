@@ -1,9 +1,30 @@
 [build-system]
-requires = [
-  "setuptools >= 40.9.0",
-  "wheel",
-]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.isort]
-profile = "black"
+[project]
+name = "consistent-pip-requirements"
+version = "0.3.0.dev0"
+description = "Add your description here"
+authors = [{ name = "Scott Searcy", email = "smsearcy@gmail.com" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/smsearcy/pre-commit-consistent-pip-requirements"
+
+[project.scripts]
+check-requirements = "consistent_pip_requirements.check_requirements:main"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.22.0",
+    "pytest>=7.4.4",
+    "ruff>=0.8.1",
+]
