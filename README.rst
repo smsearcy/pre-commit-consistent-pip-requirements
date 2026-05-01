@@ -12,6 +12,11 @@ A ``pre-commit`` hook to ensure that multiple Python requirements files
 (e.g. for development and production)
 have consistent versions.
 
+.. warning::
+
+   This project has been archived because I've switched all my projects to uv,
+   so I'm no longer using this pre-commit hook.
+
 
 Why?
 ----
