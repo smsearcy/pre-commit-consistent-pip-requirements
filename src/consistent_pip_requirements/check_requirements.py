@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 import itertools
-import sys
 from pathlib import Path
+import sys
 
 
 def main(argv=None):
-
     files = _find_requirements_files()
     if len(files) <= 1:
         return
@@ -52,11 +51,10 @@ def _read_requirements(filename: Path) -> dict[str, str]:
                 continue
             packages[package] = version
 
-    return packages
+    return package
 
 
 def _compare_requirements(first: dict[str, str], second: dict[str, str]) -> bool:
-
     overlapping_packages = set(first.keys()).intersection(second.keys())
     no_mismatches = True
     for package in overlapping_packages:

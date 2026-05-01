@@ -11,7 +11,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
 ]
 dependencies = []
@@ -23,8 +23,10 @@ Homepage = "https://github.com/smsearcy/pre-commit-consistent-pip-requirements"
 check-requirements = "consistent_pip_requirements.check_requirements:main"
 
 [dependency-groups]
-dev = [
-    "basedpyright>=1.22.0",
-    "pytest>=7.4.4",
-    "ruff>=0.8.1",
+dev = ["basedpyright>=1.22.0", "pytest>=7.4.4", "ruff>=0.8.1"]
+lsp = [
+    "pylsp-mypy>=0.6.9",
+    "pylsp-rope>=0.1.17",
+    "python-lsp-ruff>=2.2.2",
+    "python-lsp-server>=1.12.0",
 ]

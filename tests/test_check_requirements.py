@@ -13,7 +13,6 @@ def test_project_requirements(data_path):
 
 
 def test_folder_requirements(data_path):
-
     requirements_files = check_requirements._find_requirements_files(data_path)
 
     assert len(requirements_files) == 2
